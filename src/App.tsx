@@ -4,7 +4,7 @@ import SearchForm from './components/searchFrom';
 import BookDetails from './components/bookDetails';
 import GuestNavBar from './components/navBar/guestNavBar';
 import UserNavBar from './components/navBar/userNavBar';
-import { fetchData, ApiResponse } from './api/openApi';
+import { fetchData, ApiResponse, itemsPerPage } from './api/openApi';
 import { isValidUser } from './utilities/login';
 
 import './App.css'
@@ -22,8 +22,6 @@ function App() {
   const handleSubmit = () => {
     fetchDataWithDuration(currentPage)
   };
-
-  const itemsPerPage = 5;
 
   const fetchDataWithDuration = async (page: number) => {
     setLoading(true);

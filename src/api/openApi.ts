@@ -10,7 +10,7 @@ export type ApiResponse = {
     numFound: number,
     docs: BookData[]
 }
-  const itemsPerPage = 5;
+  export const itemsPerPage = 15;
   const baseApi = 'https://openlibrary.org/search.json?fields=title,author_name,edition_count,first_publish_year'
 
 
